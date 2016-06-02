@@ -15,7 +15,15 @@ public class MenuPrincipal extends JFrame implements ActionListener
 		JScrollPane stb=new JScrollPane(tb);
 		JXTaskPane xtp1=new JXTaskPane();
 		//General
-		JLabel l1_gral=new JLabel("Consultar Categoria",JLabel.LEFT);
+			JLabel l1_gral=new JLabel("Punto de Venta",JLabel.LEFT);
+		JXTaskPane xtp2=new JXTaskPane();
+		//Inventarios
+		JXTaskPane xtp3=new JXTaskPane();
+		//Creditos
+		JXTaskPane xtp4=new JXTaskPane();
+		//Clientes
+		JXTaskPane xtp5=new JXTaskPane();
+		//Cortes
 	
 	public MenuPrincipal()
 	{
@@ -47,8 +55,20 @@ public class MenuPrincipal extends JFrame implements ActionListener
 	{
 		//XTask
 		General();
+		Inventario();
+		Credito();
+		Cliente();
+		Cortes();
 		
 		tb.add(xtp1);
+		tb.setFloatable(true);
+		tb.add(xtp2);
+		tb.setFloatable(false);
+		tb.add(xtp3);
+		tb.setFloatable(false);
+		tb.add(xtp4);
+		tb.setFloatable(false);
+		tb.add(xtp5);
 		tb.setFloatable(false);
 	}
 	
@@ -58,5 +78,33 @@ public class MenuPrincipal extends JFrame implements ActionListener
 		xtp1.setTitle("                    General                    ");
 		xtp1.setExpanded(false);
 		xtp1.add(l1_gral);
+	}
+	
+	private void Inventario()
+	{
+		xtp2.setTitle("                Inventario                    ");
+		xtp2.setExpanded(false);
+		//xtp2.add(l1_gral);
+	}
+	
+	private void Credito()
+	{
+		xtp3.setTitle("                    Credito                    ");
+		xtp3.setExpanded(false);
+		//xtp3.add(l1_gral);
+	}
+	
+	private void Cliente()
+	{
+		xtp4.setTitle("                    Cliente                    ");
+		xtp4.setExpanded(false);
+		//xtp4.add(l1_gral);
+	}
+	
+	private void Cortes()
+	{
+		xtp5.setTitle("                    Cortes                    ");
+		xtp5.setExpanded(false);
+		//xtp5.add(l1_gral);
 	}
 }
